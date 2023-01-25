@@ -1,7 +1,7 @@
 [![MasterHead](https://raw.githubusercontent.com/ErikaPabon/ErikaPabon.github.io/main/img/Covid192023.jpg)](https://github.com/ErikaPabon)
 <div align=center ><h1>2023 Covid Analysis😷</h1></div>
 
-<p>Hi There🙋‍♀️, thank you for looking at my SQL Repository, the SQLQueriesCovid file includes all the SQL queries I ]run with the dataset from OurWorldinData.org. 
+<p>Hi There🙋‍♀️, thank you for looking at my SQL Repository, the SQLQueriesCovid file includes all the SQL queries I run with the dataset from OurWorldinData.org. 
 For this analysis, first, I downloded MS SQL Server, and MS SQL Server Management Studio.<br>
   <br>
 <img src="https://raw.githubusercontent.com/ErikaPabon/SQLProject/main/mssms.jpg" width="600"/><br>
