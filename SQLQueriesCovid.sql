@@ -123,6 +123,43 @@ on Deaths.location = vac.location
 and Deaths.date = vac.date
 where Deaths.continent is not null
 
+select location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
+from CovidData..CovidDemo
+where cast(date as date) = '2023-01-01'
+AND continent is not null
+order by DeathPercentage DESC;
+
+select location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
+from CovidData..CovidDemo
+where cast(date as date) = '2023-01-01'
+AND continent is not null
+order by DeathPercentage DESC;
+
+select location,population, MAX(total_cases) as HighestInfectionRate, MAX((total_cases/population))*100 as CovidPercPerPopulation
+from CovidData..CovidDemo
+WHERE continent is not null
+group by location, population
+order by CovidPercPerPopulation desc;
+
+select location, date, total_cases, population, (total_cases/population)*100 as CovidPercPerPopulation
+from CovidData..CovidDemo
+where continent is not null
+order by CovidPercPerPopulation DESC;
+
+select location,population, MAX(total_cases) as HighestInfectionRate, MAX((total_cases/population))*100 as CovidPercPerPopulation
+from CovidData..CovidDemo
+group by location, population
+order by CovidPercPerPopulation desc;
+
+select date, sum(new_cases) as New_Cases, sum(cast(new_deaths as int)) as New_Deaths, sum(cast(new_deaths as int))/sum(new_cases)*100 as Worldwide_DeathRates
+from CovidData..CovidDemo
+where continent is not null
+group by date
+order by 1;
+
+Select * 
+from CovidData..CovidDemo;
+
 
 
 
